@@ -1,2 +1,23 @@
 # logCount
 dummy url count
+
+
+`./logCount log-path url-regex`
+
+
+
+```
+./logCount /var/log/nginx/xxxxx.com.access_log get_file
+
+/get_file/3/d0300e07756dd0311dff35c3568b8158/2818000/2818990/2818990_preview.mp4/ GET 8228
+/get_file/3/97a801fb0edebc846e5f2df2b1d18563/2826000/2826172/2826172_preview.mp4/ GET 7367
+/get_file/3/a8757dcbdb097c71ba9d66e1e530e88b/2898000/2898626/2898626_preview.mp4/ GET 5220
+/get_file/3/d65b56601b4fe30ad23af3eab40f2658/2826000/2826156/2826156_preview.mp4/ GET 4587
+/get_file/3/917078cd0c85daf1153039ea42879381/2821000/2821678/2821678_preview.mp4/ GET 4464
+/get_file/3/b2b943c992674f1ab40cd038b3e31559/2823000/2823734/2823734_preview.mp4/ GET 3350
+/get_file/3/b3f187a9a4e7bcf538c6dba592fa86c1/2898000/2898846/2898846_preview.mp4/ GET 3044
+/get_file/3/1fe4f90349ebcfafbbf753cff285e287/2826000/2826400/2826400_preview.mp4/ GET 2874
+/get_file/3/12733c7132b42c4e6c8f04414ae2beea/2821000/2821178/2821178_preview.mp4/ GET 2809
+/get_file/3/94a84ead66fe199ae66a469ea2d63f57/2898000/2898856/2898856_preview.mp4/ GET 2089
+/get_file/3/2951ee2e8581cf78410558719ea7f41b/2823000/2823584/2823584_preview.mp4/ GET 2028
+```
