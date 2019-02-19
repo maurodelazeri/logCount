@@ -26,7 +26,7 @@ func readFile(path string) ([]string, error) {
 
 func main() {
 	if len(os.Args) != 3 {
-		fmt.Printf("Please use: ./logCount file-location string-you-are-loking-for \n EX: ./logCount /tmp/myfile \"get_file\" ")
+		fmt.Printf("\n./logCount log-path url-regex \n\nor check\n\n https://github.com/maurodelazeri/logCount/blob/master/README.md\n\n")
 		os.Exit(1)
 	}
 	lines, err := readFile(os.Args[1])
