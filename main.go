@@ -6,6 +6,7 @@ import (
 	"log"
 	"os"
 	"sort"
+	"strconv"
 	"strings"
 )
 
@@ -25,9 +26,13 @@ func readFile(path string) ([]string, error) {
 }
 
 func main() {
-	if len(os.Args) != 3 {
-		fmt.Printf("\n./logCount log-path url-regex \n\nor check\n\n https://github.com/maurodelazeri/logCount/blob/master/README.md\n\n")
+	if len(os.Args) != 4 {
+		fmt.Printf("\n./logCount log-path url-regex limit \n\nor check\n\n https://github.com/maurodelazeri/logCount/blob/master/README.md\n\n")
 		os.Exit(1)
+	}
+	limit, err := strconv.Atoi(os.Args[3])
+	if err != nil {
+		log.Fatalf("limit convertion: %s", err)
 	}
 	lines, err := readFile(os.Args[1])
 	if err != nil {
@@ -53,7 +58,7 @@ func main() {
 	total := 0
 	for _, k := range a {
 		for _, s := range n[k] {
-			if total > 10 {
+			if total > limit {
 				return
 			}
 			values := strings.Split(s, ":")

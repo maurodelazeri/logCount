@@ -1,13 +1,11 @@
 # logCount
+
 dummy url count
 
-
-`./logCount log-path url-regex`
-
-
+`./logCount log-path url-regex limit`
 
 ```
-./logCount /var/log/nginx/xxxxx.com.access_log get_file
+./logCount /var/log/nginx/xxxxx.com.access_log get_file 10
 
 /get_file/3/d0300e07756dd0311dff35c3568b8158/2818000/2818990/2818990_preview.mp4/ GET 8228
 /get_file/3/97a801fb0edebc846e5f2df2b1d18563/2826000/2826172/2826172_preview.mp4/ GET 7367
